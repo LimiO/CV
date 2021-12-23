@@ -14,6 +14,8 @@ jobs:
       #     path: file.txt
       - uses: actions/checkout@v2
       - run: | 
-          git add .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add file.txt
           git commit -m "generated"
-          git push origin master
+          git push
