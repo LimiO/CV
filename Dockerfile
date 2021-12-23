@@ -2,10 +2,10 @@ FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Moscow
-RUN apt-get update -y
+# RUN apt-get update -y
 
-RUN apt-get install --yes \
-    tzdata 
+# RUN apt-get install --yes \
+    # tzdata 
     # texlive-fonts-recommended \
     # texlive-fonts-extra \
     # dvipng \
@@ -18,5 +18,4 @@ RUN apt-get install --yes \
 
 COPY CV/main.tex /main.tex
 COPY CV/MySetup.tex /MySetup.tex
-# ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "/main.tex"]
-ENTRYPOINT ["cat", "/main.tex"]
+ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "/main.tex"]
