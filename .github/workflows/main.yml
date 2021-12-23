@@ -14,7 +14,7 @@ jobs:
           path: file.txt
       - uses: actions/download-artifact@v2
         with:
-          name: my-artifact
+          name: my-artifact1
           path: file.txt
       - uses: actions/checkout@v2
       - run: |
