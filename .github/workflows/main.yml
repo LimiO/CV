@@ -4,3 +4,7 @@ jobs:
   cv_job:
     runs-on: ubuntu-latest
     name: Build CI
+    steps:
+      - name: CV step
+        id: first
+        uses: actions/CV@v1
