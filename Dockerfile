@@ -16,6 +16,6 @@ RUN apt-get install --yes \
     texlive-science \
     cm-super 
 
-COPY CV/main.tex .
-COPY CV/MySetup.tex .
+COPY CV/main.tex /main.tex
+COPY CV/MySetup.tex /main.tex
 ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "main.tex"]
