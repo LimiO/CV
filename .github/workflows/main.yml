@@ -17,4 +17,4 @@ jobs:
           ref: 'artifacts'
           path: 'artifacts'
       - run: |
-          ls
+          ls artifacts
