@@ -8,9 +8,9 @@ jobs:
       - name: CV step
         id: first
         uses: LimiO/CV@master
-      - uses: actions/upload-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
-          name: ${{ env.BRANCH_NAME }}-artifact
+          name: my-artifact
           path: file.txt
       - uses: actions/checkout@v2
       - run: |
