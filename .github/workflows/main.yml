@@ -11,7 +11,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: file.txt
+          path: main.pdf
       - uses: actions/checkout@v2
         with:
           ref: 'artifacts'
@@ -21,6 +21,6 @@ jobs:
           mv ../file.txt file.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add file.txt
-          git commit -m "add file.txt"
+          git add main.pdf
+          git commit -m "add main.pdf"
           git push origin artifacts
