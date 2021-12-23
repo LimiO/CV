@@ -17,4 +17,5 @@ jobs:
           ref: 'artifacts'
           path: 'artifacts'
       - run: |
-          ls artifacts
+          cd artifacts
+          git status
