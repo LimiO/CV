@@ -8,8 +8,11 @@ jobs:
       - name: CV step
         id: first
         uses: LimiO/CV@master
-        run: echo "::set-env name=BRANCH_NAME::${GITHUB_REF##*/}"
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ env.BRANCH_NAME }}-artifact
           path: file.txt
+      - run: |
+          git config --global user.email "${GITHUB_ACTOR}"
+          git config --global user.name "${GITHUB_ACTOR}@users.noreply.github.com"
+          git status
