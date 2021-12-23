@@ -19,4 +19,4 @@ RUN apt-get update -y
 COPY CV/main.tex /main.tex
 COPY CV/MySetup.tex /MySetup.tex
 # ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "/main.tex"]
-ENTRYPOINT touch /file.txt
+ENTRYPOINT touch  file.txt

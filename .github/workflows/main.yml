@@ -11,7 +11,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: /file.txt
+          path: file.txt
       - uses: actions/checkout@v2
       - run: | 
           git config user.name github-actions
