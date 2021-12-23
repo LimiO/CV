@@ -17,5 +17,5 @@ RUN apt-get install --yes \
     cm-super 
 
 COPY CV/main.tex /main.tex
-COPY CV/MySetup.tex /main.tex
-ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "main.tex"]
+COPY CV/MySetup.tex /MySetup.tex
+ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "/main.tex"]
