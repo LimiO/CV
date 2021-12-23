@@ -19,6 +19,8 @@ jobs:
       - run: |
           cd artifacts
           mv ../file.txt file.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add file.txt
           git commit -m "add file.txt"
           git push origin artifacts
