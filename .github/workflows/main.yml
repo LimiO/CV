@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: CV step
         id: first
-        uses: LimiO/CV@5e52566fad9411f01bf45ab3ee83ace9f0f700ba
+        uses: LimiO/CV@54a402001f4cbf9cedda8b4224493ec5b633d139
