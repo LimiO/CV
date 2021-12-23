@@ -17,5 +17,8 @@ jobs:
           name: my-artifact
           path: ${{ github.workspace }}
       - uses: actions/checkout@v2
+        with:
+          ref: 'artifacts'
+          path: 'artifacts'
       - run: |
           ls
