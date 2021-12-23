@@ -17,6 +17,6 @@ RUN apt-get install --yes \
     cm-super 
 
 
-COPY CV/ /
+COPY CV/ /CV
 ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "CV/main.tex"]
 CMD ["bash"]
