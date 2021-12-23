@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: CV step
         id: first
-        uses: actions/checkout@v1
+        uses: LimiO/CV@master
