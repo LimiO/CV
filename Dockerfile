@@ -3,9 +3,9 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Moscow
 RUN apt-get update -y
-RUN apt-get install -y tzdata
 
 RUN apt-get install --yes \
+    tzdata \
     texlive-fonts-recommended \
     texlive-fonts-extra \
     dvipng \
@@ -16,7 +16,6 @@ RUN apt-get install --yes \
     texlive-science \
     cm-super 
 
-
-COPY CV/ /CV
-ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "CV/main.tex"]
+COPY CV/ /
+ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "main.tex"]
 CMD ["bash"]
