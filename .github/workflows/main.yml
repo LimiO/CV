@@ -12,6 +12,7 @@ jobs:
         with:
           name: ${{ env.BRANCH_NAME }}-artifact
           path: file.txt
+      - uses: actions/checkout@v2
       - run: |
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "${GITHUB_ACTOR}@users.noreply.github.com"
