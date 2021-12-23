@@ -18,4 +18,3 @@ RUN apt-get install --yes \
 
 COPY CV/ /
 ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "main.tex"]
-CMD ["bash"]
