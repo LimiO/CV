@@ -10,12 +10,5 @@ jobs:
         uses: LimiO/CV@master
       - uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
+          name: ${{ env.BRANCH_NAME }}-artifact
           path: file.txt
-      - uses: actions/checkout@v2
-      - run: | 
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add file.txt
-          git commit -m "generated"
-          git push
