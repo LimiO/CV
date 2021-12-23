@@ -1,0 +1,6 @@
+# action.yml
+name: 'CV'
+description: 'CV for Ryabykh Albert'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
