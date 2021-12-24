@@ -19,4 +19,3 @@ RUN apt-get install --yes \
 COPY CV/main.tex /main.tex
 COPY CV/MySetup.tex /MySetup.tex
 ENTRYPOINT ["pdflatex", "-interaction=nonstopmode", "/main.tex"]
-# ENTRYPOINT touch  file.txt
